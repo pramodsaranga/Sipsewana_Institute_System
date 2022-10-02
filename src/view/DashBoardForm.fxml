@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="212.0" layoutY="19.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="262.0" layoutY="17.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="467.0" layoutY="17.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/z6.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="508.0" layoutY="14.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1181.0" layoutY="14.0" onAction="#openLoginFormOnAction" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #34495e;" text="Login" textFill="WHITE" />
+      <Label layoutX="7.0" layoutY="-17.0" prefHeight="73.0" prefWidth="165.0" text="Sipsewana" textFill="#5ca0d1">
+         <font>
+            <Font name="Blackadder ITC" size="44.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="998.0" layoutY="15.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #16a085;" text="Home" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="1092.0" layoutY="13.0" onAction="#openAboutFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #27ae60;" text="About " textFill="WHITE" />
+      <ImageView fitHeight="806.0" fitWidth="1311.0" layoutY="71.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/ty499.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="470.0" layoutY="163.0" prefHeight="26.0" prefWidth="224.0" text="W E L C O M E   TO " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="427.0" prefHeight="112.0" prefWidth="591.0" text="Student Managment System" textFill="WHITE">
+         <font>
+            <Font name="Baskerville Old Face" size="52.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="350.0" prefHeight="77.0" prefWidth="224.0" text="Sipsewana" textFill="WHITE">
+         <font>
+            <Font name="Blackadder ITC" size="47.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="740.0" layoutY="91.0" prefHeight="617.0" prefWidth="546.0" style="-fx-background-color: white; -fx-background-radius: 50;" />
+   </children>
+</AnchorPane>
