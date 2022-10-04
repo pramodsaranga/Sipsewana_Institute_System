@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="576.0" prefWidth="476.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane fx:id="loginContext" prefHeight="576.0" prefWidth="476.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
       <TextField fx:id="txtUserName" layoutX="99.0" layoutY="151.0" prefHeight="38.0" prefWidth="288.0" promptText="UserName" />
       <PasswordField fx:id="txtPassword" layoutX="99.0" layoutY="243.0" prefHeight="38.0" prefWidth="288.0" promptText="Password" />
@@ -30,7 +29,7 @@
             <Font name="Arial Black" size="45.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="380.0" onAction="#openParkingDetailsForm" prefHeight="50.0" prefWidth="231.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="380.0" prefHeight="50.0" prefWidth="231.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Login" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

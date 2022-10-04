@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+<AnchorPane fx:id="DashBoardContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
       <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="212.0" layoutY="19.0" pickOnBounds="true">
          <image>
@@ -58,6 +57,6 @@
             <Font name="Blackadder ITC" size="47.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="740.0" layoutY="91.0" prefHeight="617.0" prefWidth="546.0" style="-fx-background-color: white; -fx-background-radius: 50;" />
+      <AnchorPane fx:id="lodeContext" layoutX="740.0" layoutY="91.0" prefHeight="617.0" prefWidth="546.0" style="-fx-background-radius: 50;" />
    </children>
 </AnchorPane>
