@@ -1,14 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ProgrammesFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="programmeContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgrammesFormController">
+   <children>
+      <TextField fx:id="txtProgramName" layoutX="27.0" layoutY="219.0" onAction="#programNameOnAction" prefHeight="38.0" prefWidth="369.0" promptText="Program Name" styleClass="textField" />
+      <Label layoutX="27.0" layoutY="180.0" styleClass="textLabel" text="Program Name" textFill="#3c5a9a">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAdd" layoutX="720.0" layoutY="299.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="49.0" prefWidth="170.0" style="-fx-background-color: #2db16f; -fx-background-radius: 50;" text="Add " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblProgram" layoutX="17.0" layoutY="371.0" prefHeight="492.0" prefWidth="1277.0">
+         <columns>
+            <TableColumn fx:id="colProgramId" prefWidth="189.99996948242188" text="Program Id" />
+            <TableColumn fx:id="colProgramName" prefWidth="445.0" text="Program Name" />
+            <TableColumn fx:id="colDuration" prefWidth="336.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="305.0" text="Fee (LKR)" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnUpdate" layoutX="912.0" layoutY="299.0" mnemonicParsing="false" onAction="#UpdateOnAction" prefHeight="49.0" prefWidth="155.0" style="-fx-background-color: #ED4C67; -fx-background-radius: 50;" text="Update " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnRemove" layoutX="1096.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeOnAction" prefHeight="49.0" prefWidth="161.0" style="-fx-background-color: #d63636; -fx-background-radius: 50;" text="Remove " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtId" disable="true" layoutX="26.0" layoutY="125.0" onAction="#idOnAction" prefHeight="45.0" prefWidth="189.0" promptText="P-000" styleClass="textField">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </TextField>
+      <Label layoutX="27.0" layoutY="87.0" styleClass="textLabel" text="Program Id" textFill="#3c5a9a">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="76.0" prefWidth="1311.0" style="-fx-background-color: #58B19F;">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="61.0" prefWidth="333.0" text="Programmes Manage" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="39.0" />
+               </font>
+            </Label>
+            <Separator layoutX="357.0" layoutY="49.0" prefHeight="3.0" prefWidth="123.0" />
+            <Label layoutX="509.0" layoutY="17.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="592.0" layoutY="13.0" prefHeight="52.0" prefWidth="189.0">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="788.0" layoutY="16.0" text="Time :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="869.0" layoutY="8.0" prefHeight="52.0" prefWidth="182.0">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="929.0" layoutY="-62.0" prefHeight="94.0" prefWidth="87.0" />
+            <AnchorPane layoutX="1063.0" layoutY="8.0" prefHeight="61.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="1.0" onAction="#openAdminFormOnAction" prefHeight="61.0" prefWidth="104.0" style="-fx-background-color: #cc439c; -fx-background-radius: 50;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="33.0" layoutY="15.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/z10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtDuration" layoutX="455.0" layoutY="219.0" onAction="#durationOnAction" prefHeight="38.0" prefWidth="303.0" promptText="Duration" styleClass="textField" />
+      <Label layoutX="455.0" layoutY="180.0" styleClass="textLabel" text="Duration" textFill="#3c5a9a">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="913.0" layoutY="180.0" styleClass="textLabel" text="Fee (LKR)" textFill="#3c5a9a">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFee" layoutX="913.0" layoutY="219.0" onAction="#feeOnAction" prefHeight="38.0" prefWidth="286.0" promptText="Fee (LKR)" styleClass="textField" />
+      <JFXTextField fx:id="txtSearch" focusColor="#752003" labelFloat="true" layoutX="907.0" layoutY="97.0" prefHeight="52.0" prefWidth="266.0" promptText="Search">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1173.0" layoutY="101.0" onKeyReleased="#Student_KeyReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/search.jpg" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

@@ -4,9 +4,16 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class StudentFormController {
     public AnchorPane studentContext;
@@ -49,7 +56,11 @@ public class StudentFormController {
     public void idOnAction(ActionEvent actionEvent) {
     }
 
-    public void openAdminFormOnAction(ActionEvent actionEvent) {
+    public void openAdminFormOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/AdminForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) studentContext.getScene().getWindow();
+        window.setScene(new Scene(load));
     }
 
     public void fullNameOnAction(ActionEvent actionEvent) {
