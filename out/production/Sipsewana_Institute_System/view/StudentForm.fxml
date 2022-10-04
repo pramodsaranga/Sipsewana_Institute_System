@@ -45,8 +45,8 @@
             <TableColumn fx:id="coBirthday" prefWidth="154.0" text="BirthDay" />
             <TableColumn fx:id="colAge" prefWidth="79.0" text="Age" />
             <TableColumn fx:id="colGender" prefWidth="105.0" text="Gender" />
-            <TableColumn fx:id="colPhoneNumber" prefWidth="146.0" text="Phone Number" />
-            <TableColumn fx:id="colEducation" prefWidth="179.0" text="Education" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="185.0" text="Phone Number" />
+            <TableColumn fx:id="colEducation" prefWidth="254.0" text="Education" />
          </columns>
       </TableView>
       <Button fx:id="btnUpdate" layoutX="922.0" layoutY="358.0" mnemonicParsing="false" onAction="#UpdateOnAction" prefHeight="49.0" prefWidth="155.0" style="-fx-background-color: #ED4C67; -fx-background-radius: 50;" text="Update Student" textFill="WHITE">
@@ -93,17 +93,17 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtDate" alignment="CENTER" layoutX="592.0" layoutY="13.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="584.0" layoutY="8.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="788.0" layoutY="16.0" text="Time :" textFill="WHITE">
+            <Label layoutX="798.0" layoutY="17.0" text="Time :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtTime" alignment="CENTER" layoutX="869.0" layoutY="8.0" prefHeight="52.0" prefWidth="182.0" textFill="WHITE">
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="873.0" layoutY="8.0" prefHeight="52.0" prefWidth="170.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
@@ -114,6 +114,9 @@
                      <font>
                         <Font name="Arial Rounded MT Bold" size="17.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </JFXButton>
                   <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="33.0" layoutY="15.0" pickOnBounds="true">
                      <image>
@@ -144,7 +147,7 @@
       </Label>
       <TextField fx:id="txtAge" layoutX="913.0" layoutY="208.0" onAction="#ageOnAction" prefHeight="38.0" prefWidth="286.0" promptText="Age" styleClass="textField" />
       <JFXComboBox fx:id="cmbGender" layoutX="27.0" layoutY="292.0" onAction="#genderOnAction" prefHeight="38.0" prefWidth="325.0" />
-      <JFXTextField fx:id="txtSearch" focusColor="#752003" labelFloat="true" layoutX="907.0" layoutY="97.0" prefHeight="52.0" prefWidth="266.0" promptText="Search">
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="907.0" layoutY="97.0" prefHeight="52.0" prefWidth="266.0" promptText="Search">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

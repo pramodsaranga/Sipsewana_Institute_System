@@ -9,67 +9,71 @@
 
 <AnchorPane fx:id="DashBoardContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="212.0" layoutY="19.0" pickOnBounds="true">
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="212.0" layoutY="22.0" pickOnBounds="true">
          <image>
             <Image url="@assets/email.png" />
          </image>
       </ImageView>
-      <Label layoutX="262.0" layoutY="17.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
+      <Label layoutX="262.0" layoutY="20.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="467.0" layoutY="17.0" pickOnBounds="true">
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="467.0" layoutY="20.0" pickOnBounds="true">
          <image>
             <Image url="@assets/z6.png" />
          </image>
       </ImageView>
-      <Label layoutX="508.0" layoutY="14.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
+      <Label layoutX="508.0" layoutY="17.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="1181.0" layoutY="14.0" onAction="#openLoginFormOnAction" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #40a2d3;" text="Login" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="1188.0" layoutY="17.0" onAction="#openLoginFormOnAction" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #40a2d3; -fx-background-radius: 50;" text="Login" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="17.0" />
          </font></JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="981.0" layoutY="13.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #16a085;" text="Home" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="959.0" layoutY="16.0" onAction="#openHomeFormOnAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #16a085; -fx-background-radius: 50;" text="Home" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="17.0" />
          </font></JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1076.0" layoutY="13.0" onAction="#openAboutFormOnAction" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #27ae60;" text="About " textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="1075.0" layoutY="16.0" onAction="#openAboutFormOnAction" prefHeight="46.0" prefWidth="106.0" style="-fx-background-color: #27ae60; -fx-background-radius: 50;" text="About " textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="17.0" />
          </font></JFXButton>
-      <ImageView fitHeight="806.0" fitWidth="1311.0" layoutY="71.0" pickOnBounds="true">
+      <ImageView fitHeight="793.0" fitWidth="1311.0" layoutY="87.0" pickOnBounds="true">
          <image>
-            <Image url="@assets/ty499.jpg" />
+            <Image url="@assets/3433.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="470.0" layoutY="163.0" prefHeight="26.0" prefWidth="224.0" text="W E L C O M E   TO " textFill="WHITE">
+      <Label layoutX="543.0" layoutY="248.0" prefHeight="35.0" prefWidth="199.0" text="W E L C O M E   TO " textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="81.0" layoutY="427.0" prefHeight="112.0" prefWidth="591.0" text="Student Managment System" textFill="WHITE">
-         <font>
-            <Font name="Baskerville Old Face" size="52.0" />
-         </font>
-      </Label>
-      <Label layoutX="284.0" layoutY="350.0" prefHeight="77.0" prefWidth="224.0" text="Sipsewana" textFill="WHITE">
-         <font>
-            <Font name="Blackadder ITC" size="47.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="26.0" layoutY="-5.0" pickOnBounds="true">
+      <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="26.0" layoutY="-2.0" pickOnBounds="true">
          <image>
             <Image url="@assets/ap28.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="20.0" layoutY="18.0" prefHeight="52.0" prefWidth="140.0" text="Sipsewana" textFill="#46cdcd">
+      <Label layoutX="20.0" layoutY="21.0" prefHeight="56.0" prefWidth="151.0" text="Sipsewana" textFill="#46cdcd">
          <font>
-            <Font name="Blackadder ITC" size="34.0" />
+            <Font name="Blackadder ITC" size="38.0" />
          </font>
       </Label>
+      <AnchorPane layoutX="230.0" layoutY="364.0" prefHeight="269.0" prefWidth="839.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <children>
+            <Label layoutX="60.0" layoutY="112.0" prefHeight="112.0" prefWidth="729.0" text="Student Managment System" textFill="#207c6b">
+               <font>
+                  <Font name="Baskerville Old Face" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="-15.0" prefHeight="84.0" prefWidth="282.0" text="Sipsewana" textFill="#d77488">
+               <font>
+                  <Font name="Blackadder ITC" size="73.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
