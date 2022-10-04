@@ -29,22 +29,22 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="1033.0" layoutY="21.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="118.0" style="-fx-background-color: #16a085;" text="Home" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="994.0" layoutY="21.0" onAction="#openHomeFormOnAction" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #16a085; -fx-background-radius: 50;" text="Home" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1177.0" layoutY="20.0" onAction="#openAboutFormOnAction" prefHeight="38.0" prefWidth="112.0" style="-fx-background-color: #27ae60;" text="About " textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="1157.0" layoutY="20.0" onAction="#openAboutFormOnAction" prefHeight="45.0" prefWidth="132.0" style="-fx-background-color: #27ae60; -fx-background-radius: 50;" text="About " textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="17.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="800.0" fitWidth="1311.0" layoutY="78.0" pickOnBounds="true">
+      <ImageView fitHeight="793.0" fitWidth="1311.0" layoutY="85.0" pickOnBounds="true">
          <image>
-            <Image url="@assets/3a.jpg" />
+            <Image url="@assets/imas12.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="51.0" layoutY="190.0" prefHeight="475.0" prefWidth="361.0" style="-fx-background-color: #ff7675; -fx-background-radius: 50;">
+      <AnchorPane layoutX="51.0" layoutY="190.0" prefHeight="475.0" prefWidth="361.0" style="-fx-background-color: #58B19F; -fx-background-radius: 50;">
          <children>
             <ImageView fitHeight="266.0" fitWidth="266.0" layoutX="48.0" layoutY="30.0" pickOnBounds="true">
                <image>
@@ -56,10 +56,10 @@
                   <Font name="Arial Rounded MT Bold" size="27.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="10.0" onAction="#openStudentFormOnAction" prefHeight="455.0" prefWidth="325.0" text="Button" />
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="10.0" onAction="#openStudentFormOnAction" prefHeight="386.0" prefWidth="325.0" text="Button" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="470.0" layoutY="190.0" prefHeight="475.0" prefWidth="371.0" style="-fx-background-color: #ff7675; -fx-background-radius: 50;">
+      <AnchorPane layoutX="470.0" layoutY="190.0" prefHeight="475.0" prefWidth="371.0" style="-fx-background-color: #58B19F; -fx-background-radius: 50;">
          <children>
             <ImageView fitHeight="266.0" fitWidth="266.0" layoutX="48.0" layoutY="30.0" pickOnBounds="true">
                <image>
@@ -71,10 +71,10 @@
                   <Font name="Arial Rounded MT Bold" size="27.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="-5.0" layoutY="10.0" onAction="#openProgrammesFormOnAction" prefHeight="455.0" prefWidth="336.0" />
+            <JFXButton buttonType="RAISED" layoutX="-7.0" layoutY="10.0" onAction="#openProgrammesFormOnAction" prefHeight="455.0" prefWidth="336.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="896.0" layoutY="190.0" prefHeight="475.0" prefWidth="361.0" style="-fx-background-color: #ff7675; -fx-background-radius: 50;">
+      <AnchorPane layoutX="896.0" layoutY="190.0" prefHeight="475.0" prefWidth="361.0" style="-fx-background-color: #58B19F; -fx-background-radius: 50;">
          <children>
             <ImageView fitHeight="273.0" fitWidth="278.0" layoutX="48.0" layoutY="30.0" pickOnBounds="true">
                <image>
@@ -87,6 +87,7 @@
                </font>
             </Label>
             <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="10.0" onAction="#openPaymentFormOnAction" prefHeight="455.0" prefWidth="325.0" />
+            <JFXButton layoutX="129.0" layoutY="410.0" text="View more" textFill="WHITE" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="20.0" layoutY="1.0" pickOnBounds="true">
