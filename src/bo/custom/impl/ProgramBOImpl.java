@@ -1,0 +1,72 @@
+package bo.custom.impl;
+
+import bo.custom.ProgramBO;
+import dao.DAOFactory;
+import dao.custom.ProgramDAO;
+import dto.ProgramDTO;
+import entity.Program;
+import view.tm.ProgramTM;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class ProgramBOImpl implements ProgramBO {
+    private final ProgramDAO programDAO = (ProgramDAO) DAOFactory.getDAOFactory().getDAO(DAOFactory.DAOTypes.PROGRAM);
+
+    @Override
+    public ProgramTM getProgram(String programId) throws SQLException, ClassNotFoundException {
+        ArrayList<ProgramTM> all = getAll();
+        for (ProgramTM p : all) {
+            if (p.getProgramId().equals(programId)){
+                return new ProgramTM(
+                        p.getProgramId(),
+                        p.getProgramName(),
+                        p.getDuration(),
+                        p.getFee());
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public ProgramDTO searchProgram(String programId) throws SQLException, ClassNotFoundException {
+        Program program = programDAO.search(programId);
+        return new ProgramDTO(program.getProgramId(),
+                program.getProgramName(),
+                program.getDuration(),
+                program.getFee());
+    }
+
+    @Override
+    public boolean add(ProgramDTO programDTO) throws SQLException, ClassNotFoundException {
+        return programDAO.add(new Program(
+                programDTO.getProgramId(),
+                programDTO.getProgramName(),
+                programDTO.getDuration(),
+                programDTO.getFee()));
+    }
+
+    @Override
+    public boolean update(ProgramDTO programDTO) throws SQLException, ClassNotFoundException {
+        return programDAO.update(new Program(
+                programDTO.getProgramId(),
+                programDTO.getProgramName(),
+                programDTO.getDuration(),
+                programDTO.getFee()));
+    }
+
+    @Override
+    public boolean delete(String programId) throws SQLException, ClassNotFoundException {
+        return programDAO.delete(programId);
+    }
+
+    @Override
+    public ArrayList<ProgramTM> getAll() throws SQLException, ClassNotFoundException {
+        ArrayList<Program> all = programDAO.getAll();
+        ArrayList<ProgramTM> allPrograms = new ArrayList<>();
+        for (Program program : all) {
+            allPrograms.add(new ProgramTM(program.getProgramId(),program.getProgramName(),program.getDuration(),program.getFee()));
+        }
+        return allPrograms;
+    }
+}

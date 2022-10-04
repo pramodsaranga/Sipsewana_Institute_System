@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="programmeContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgrammesFormController">
+<AnchorPane fx:id="programmeContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgramFormController">
    <children>
       <TextField fx:id="txtProgramName" layoutX="27.0" layoutY="219.0" onAction="#programNameOnAction" prefHeight="38.0" prefWidth="369.0" promptText="Program Name" styleClass="textField" />
       <Label layoutX="27.0" layoutY="180.0" styleClass="textLabel" text="Program Name" textFill="#3c5a9a">
@@ -126,7 +126,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXTextField>
-      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1173.0" layoutY="101.0" onKeyReleased="#Student_KeyReleased" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1173.0" layoutY="101.0" onKeyReleased="#Program_KeyReleased" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/search.jpg" />
          </image>

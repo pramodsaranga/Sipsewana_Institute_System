@@ -1,25 +1,48 @@
 package controller;
 
+import bo.BoFactory;
+import bo.custom.StudentBO;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import dto.StudentDTO;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import validation.ValidationUtil;
+import view.tm.StudentTM;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 public class StudentFormController {
+
+    private final StudentBO studentBO = (StudentBO) BoFactory.getBOFactory().getBO(BoFactory.BoTypes.STUDENT);
     public AnchorPane studentContext;
     public TextField txtAddress;
     public Button btnAdd;
-    public TableView tblStudent;
+    public TableView <StudentTM> tblStudent;
     public TableColumn colStudentId;
     public TableColumn colFullName;
     public TableColumn colAddress;
@@ -41,19 +64,181 @@ public class StudentFormController {
     public JFXTextField txtSearch;
     public TextField txtEducation;
 
-    public void addressOnAction(ActionEvent actionEvent) {
+    LinkedHashMap<TextField, Pattern> map = new LinkedHashMap();
+    Pattern namePattern = Pattern.compile("^[A-z ]{2,}$");
+    Pattern addressPattern = Pattern.compile("^[A-z ]{3,30}([0-9]{1,2})?$");
+    Pattern agePattern = Pattern.compile("[1-9][0-9]*$");
+    Pattern phoneNumberPattern = Pattern.compile("^[0-9][-]?[0-9]*$");
+    Pattern educationPattern = Pattern.compile("[A-z ]{3,30}([0-9]{1,2})?$");
+
+    public void initialize() throws SQLException, ClassNotFoundException {
+        storeValidation();
+
+        colStudentId.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        colFullName.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        colAddress.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        coBirthday.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        colAge.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        colGender.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        colPhoneNumber.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+        colEducation.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+
+
+        colStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+        colFullName.setCellValueFactory(new PropertyValueFactory<>("studentName"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        coBirthday.setCellValueFactory(new PropertyValueFactory<>("birthday"));
+        colAge.setCellValueFactory(new PropertyValueFactory<>("age"));
+        colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        colPhoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        colEducation.setCellValueFactory(new PropertyValueFactory<>("education"));
+
+        loadDateAndTime();
+
+        cmbGender.getItems().addAll(
+                "Male",
+                "Female");
+
+        setItemsToTable(studentBO.getAll());
+
+        setStudentId();
+
+    }
+
+    private void clearText() {
+        txtFullName.setText("");
+        txtAddress.setText("");
+        txtAge.setText("");
+        txtPhoneNumber.setText("");
+        txtEducation.setText("");
+    }
+
+    private void storeValidation() {
+        map.put(txtFullName, namePattern);
+        map.put(txtAddress, addressPattern);
+        map.put(txtAge, agePattern);
+        map.put(txtPhoneNumber, phoneNumberPattern);
+        map.put(txtEducation, educationPattern);
+    }
+
+    private void setStudentId() throws SQLException, ClassNotFoundException {
+        txtId.setText(studentBO.getStudentIds());
+    }
+
+    private void loadDateAndTime() {
+        Date date = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        txtDate.setText(f.format(date));
+
+        Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            LocalTime currentTime = LocalTime.now();
+            txtTime.setText(
+                    currentTime.getHour() + " : " + currentTime.getMinute() + " : " + currentTime.getSecond()
+            );
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+        time.setCycleCount(Animation.INDEFINITE);
+        time.play();
     }
 
     public void AddStudentOnAction(ActionEvent actionEvent) {
+        String studentId = txtId.getText();
+        String studentName = txtFullName.getText();
+        String address = txtAddress.getText();
+        String birthday =String.valueOf(dpBirthday.getValue());
+        //String birthday = txtBirthDay.getText();
+        int age = Integer.parseInt(txtAge.getText());
+        String gender = String.valueOf(cmbGender.getValue());
+        String phoneNumber = txtPhoneNumber.getText();
+        String education = txtEducation.getText();
+
+        try {
+            if (existStudent(studentId)) {
+                new Alert(Alert.AlertType.ERROR, studentId + " already exists").show();
+            } else {
+                StudentDTO studentDTO = new StudentDTO(studentId,studentName,address,birthday,age,gender,phoneNumber,education);
+                studentBO.addStudent(studentDTO);
+
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
+                setStudentId();
+                clearText();
+                setItemsToTable(studentBO.getAll());
+
+
+            }
+
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to save the customer " + e.getMessage()).show();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void UpdateOnAction(ActionEvent actionEvent) {
+    private void setItemsToTable(ArrayList<StudentTM> student) {
+        ObservableList<StudentTM> obList = FXCollections.observableArrayList();
+        student.forEach(e -> {
+            obList.add(
+                    new StudentTM(e.getStudentId(),e.getStudentName(),e.getAddress(),e.getBirthday(),e.getAge(),e.getGender(),e.getPhoneNumber(),e.getEducation()));
+        });
+        tblStudent.setItems(obList);
     }
 
-    public void RemoveOnAction(ActionEvent actionEvent) {
+
+    boolean existStudent(String studentId) {
+        return studentBO.ifStudentExist(studentId);
     }
 
-    public void idOnAction(ActionEvent actionEvent) {
+
+    public void UpdateOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        String studentId = txtId.getText();
+        String studentName = txtFullName.getText();
+        String address = txtAddress.getText();
+        String birthday =String.valueOf(dpBirthday.getValue());
+        int age = Integer.parseInt(txtAge.getText());
+        String gender = String.valueOf(cmbGender.getValue());
+        String phoneNumber = txtPhoneNumber.getText();
+        String education = txtEducation.getText();
+
+        StudentDTO studentDTO = new StudentDTO(studentId,studentName,address,birthday,age,gender,phoneNumber,education);
+
+        if (studentBO.updateStudent(studentDTO)) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Updated..").show();
+            setItemsToTable(studentBO.getAll());
+        } else {
+            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+
+        }
+    }
+
+    public void RemoveOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        if (studentBO.deleteStudent(txtId.getText())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Deleted").show();
+            setItemsToTable(studentBO.getAll());
+        } else {
+            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+        }
+    }
+
+
+    public void idOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        String studentId = txtId.getText();
+
+        StudentDTO studentDTO = studentBO.searchStudent(studentId);
+        if (studentDTO == null) {
+            new Alert(Alert.AlertType.WARNING, "Empty Result Set").show();
+        } else {
+            setData(studentDTO);
+        }
+    }
+
+    private void setData(StudentDTO s) {
+        txtId.setText(s.getStudentId());
+        txtFullName.setText(s.getStudentName());
+        txtAddress.setText(s.getAddress());
+        txtAge.setText(String.valueOf(s.getAge()));
+        txtPhoneNumber.setText(s.getPhoneNumber());
+        txtEducation.setText(s.getEducation());
     }
 
     public void openAdminFormOnAction(ActionEvent actionEvent) throws IOException {
@@ -64,21 +249,37 @@ public class StudentFormController {
     }
 
     public void fullNameOnAction(ActionEvent actionEvent) {
+
+        txtAddress.requestFocus();
     }
 
+    public void addressOnAction(ActionEvent actionEvent) {
+        dpBirthday.requestFocus();
+    }
     public void phoneOnAction(ActionEvent actionEvent) {
     }
 
     public void birthDayOnAction(ActionEvent actionEvent) {
+        txtAge.requestFocus();
     }
 
     public void ageOnAction(ActionEvent actionEvent) {
+        cmbGender.requestFocus();
     }
 
     public void genderOnAction(ActionEvent actionEvent) {
+        txtPhoneNumber.requestFocus();
     }
 
     public void Student_KeyReleased(KeyEvent keyEvent) {
+        Object response = ValidationUtil.validate(map, (JFXButton) btnAdd);
+
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            if (response instanceof TextField) {
+                TextField errorText = (TextField) response;
+                errorText.requestFocus();
+            }
+        }
     }
 
     public void educationOnAction(ActionEvent actionEvent) {
