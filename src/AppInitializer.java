@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import util.FactoryConfiguration;
 
 
 public class AppInitializer extends Application {
@@ -15,6 +16,6 @@ public class AppInitializer extends Application {
         primaryStage.show();
     }
 
-//    Session session = FactoryConfiguration.getInstance().getSession();
-//    Transaction transaction = session.beginTransaction();
+    Session session = FactoryConfiguration.getInstance().getSession();
+    Transaction transaction = session.beginTransaction();
 }
