@@ -29,14 +29,18 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="1181.0" layoutY="14.0" onAction="#openLoginFormOnAction" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #34495e;" text="Login" textFill="WHITE" />
-      <Label layoutX="7.0" layoutY="-17.0" prefHeight="73.0" prefWidth="165.0" text="Sipsewana" textFill="#5ca0d1">
+      <JFXButton buttonType="RAISED" layoutX="1181.0" layoutY="14.0" onAction="#openLoginFormOnAction" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #40a2d3;" text="Login" textFill="WHITE">
          <font>
-            <Font name="Blackadder ITC" size="44.0" />
-         </font>
-      </Label>
-      <JFXButton buttonType="RAISED" layoutX="998.0" layoutY="15.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #16a085;" text="Home" textFill="WHITE" />
-      <JFXButton buttonType="RAISED" layoutX="1092.0" layoutY="13.0" onAction="#openAboutFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #27ae60;" text="About " textFill="WHITE" />
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="981.0" layoutY="13.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #16a085;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1076.0" layoutY="13.0" onAction="#openAboutFormOnAction" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #27ae60;" text="About " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font></JFXButton>
       <ImageView fitHeight="806.0" fitWidth="1311.0" layoutY="71.0" pickOnBounds="true">
          <image>
             <Image url="@assets/ty499.jpg" />
@@ -44,7 +48,7 @@
       </ImageView>
       <Label layoutX="470.0" layoutY="163.0" prefHeight="26.0" prefWidth="224.0" text="W E L C O M E   TO " textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
       <Label layoutX="81.0" layoutY="427.0" prefHeight="112.0" prefWidth="591.0" text="Student Managment System" textFill="WHITE">
@@ -57,6 +61,16 @@
             <Font name="Blackadder ITC" size="47.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="lodeContext" layoutX="740.0" layoutY="91.0" prefHeight="617.0" prefWidth="546.0" style="-fx-background-radius: 50;" />
+      <AnchorPane fx:id="lodeContext" layoutX="747.0" layoutY="80.0" prefHeight="617.0" prefWidth="546.0" style="-fx-background-radius: 50;" />
+      <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="26.0" layoutY="-5.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/ap28.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="18.0" prefHeight="52.0" prefWidth="140.0" text="Sipsewana" textFill="#46cdcd">
+         <font>
+            <Font name="Blackadder ITC" size="34.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

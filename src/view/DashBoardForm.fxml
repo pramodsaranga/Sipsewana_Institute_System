@@ -61,7 +61,6 @@
             <Font name="Blackadder ITC" size="47.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="lodeContext" layoutX="747.0" layoutY="80.0" prefHeight="617.0" prefWidth="546.0" style="-fx-background-radius: 50;" />
       <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="26.0" layoutY="-5.0" pickOnBounds="true">
          <image>
             <Image url="@assets/ap28.jpg" />

@@ -15,10 +15,10 @@ public class DashBoardFormController {
     public AnchorPane lodeContext;
 
     public void openLoginFormOnAction(ActionEvent actionEvent) throws IOException {
-            URL resource = getClass().getResource("../view/LoginForm.fxml");
-            Parent load = FXMLLoader.load(resource);
-            lodeContext.getChildren().clear();
-            lodeContext.getChildren().add(load);
+        URL resource = getClass().getResource("../view/LoginForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) DashBoardContext.getScene().getWindow();
+        window.setScene(new Scene(load));
         }
 
 

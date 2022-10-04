@@ -10,42 +10,96 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginContext" prefHeight="576.0" prefWidth="476.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane fx:id="loginContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
-      <TextField fx:id="txtUserName" layoutX="99.0" layoutY="151.0" prefHeight="38.0" prefWidth="288.0" promptText="UserName" />
-      <PasswordField fx:id="txtPassword" layoutX="99.0" layoutY="243.0" prefHeight="38.0" prefWidth="288.0" promptText="Password" />
-      <Label layoutX="42.0" layoutY="119.0" text="Username">
+      <ImageView fitHeight="805.0" fitWidth="1318.0" layoutX="-4.0" layoutY="72.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/Z.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="418.0" layoutY="162.0" prefHeight="553.0" prefWidth="474.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <children>
+            <TextField fx:id="txtUserName" layoutX="97.0" layoutY="124.0" prefHeight="38.0" prefWidth="288.0" promptText="UserName" />
+            <PasswordField fx:id="txtPassword" layoutX="97.0" layoutY="216.0" prefHeight="38.0" prefWidth="288.0" promptText="Password" />
+            <Label layoutX="40.0" layoutY="92.0" text="Username">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="177.0" text="Password">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="6.0" text="Login" textFill="#376480">
+               <font>
+                  <Font name="Arial Black" size="45.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="112.0" layoutY="353.0" onAction="#openAdminForm" prefHeight="50.0" prefWidth="231.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="52.0" layoutY="128.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/z5.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="52.0" layoutY="220.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/z4.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="208.0" layoutY="24.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="22.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
          <font>
-            <Font name="Arial Rounded MT Bold" size="16.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="44.0" layoutY="204.0" text="Password">
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="463.0" layoutY="22.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/z6.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="504.0" layoutY="19.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
          <font>
-            <Font name="Arial Rounded MT Bold" size="16.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="176.0" layoutY="33.0" text="Login" textFill="#376480">
+      <JFXButton buttonType="RAISED" layoutX="1177.0" layoutY="19.0" prefHeight="38.0" prefWidth="121.0" style="-fx-background-color: #40a2d3;" text="Login" textFill="WHITE">
          <font>
-            <Font name="Arial Black" size="45.0" />
-         </font>
-      </Label>
-      <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="380.0" prefHeight="50.0" prefWidth="231.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Login" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Arial Rounded MT Bold" size="24.0" />
+            <Font name="Arial Rounded MT Bold" size="17.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="54.0" layoutY="155.0" pickOnBounds="true">
+      <JFXButton buttonType="RAISED" layoutX="977.0" layoutY="18.0" onAction="#openHomeFormOnAction" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #16a085;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1072.0" layoutY="18.0" onAction="#openAboutFormOnAction" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #27ae60;" text="About " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="22.0" pickOnBounds="true">
          <image>
-            <Image url="@assets/z5.png" />
+            <Image url="@assets/ap28.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="54.0" layoutY="247.0" pickOnBounds="true">
-         <image>
-            <Image url="@assets/z4.png" />
-         </image>
-      </ImageView>
+      <Label layoutX="16.0" layoutY="23.0" prefHeight="52.0" prefWidth="140.0" text="Sipsewana" textFill="#46cdcd">
+         <font>
+            <Font name="Blackadder ITC" size="34.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
