@@ -42,7 +42,7 @@
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </JFXButton>
-            <Label fx:id="lblTotal" alignment="CENTER" layoutX="43.0" layoutY="121.0" prefHeight="71.0" prefWidth="214.0" textFill="#860a0a">
+            <Label fx:id="lblTotal" alignment="CENTER" layoutX="43.0" layoutY="121.0" prefHeight="71.0" prefWidth="214.0">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -66,38 +66,38 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <JFXComboBox fx:id="cmbStudentId" focusColor="#860a0a" layoutX="15.0" layoutY="47.0" prefHeight="52.0" prefWidth="154.0" promptText="Student Id" />
-            <JFXTextField fx:id="txtStudentName" focusColor="#860a0a" labelFloat="true" layoutX="214.0" layoutY="59.0" prefHeight="40.0" prefWidth="270.0" promptText="Student Name" unFocusColor="#860a0a">
+            <JFXComboBox fx:id="cmbStudentId" layoutX="15.0" layoutY="47.0" prefHeight="52.0" prefWidth="154.0" promptText="Student Id" />
+            <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="214.0" layoutY="59.0" prefHeight="40.0" prefWidth="270.0" promptText="Student Name">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtAddress" focusColor="#860a0a" labelFloat="true" layoutX="522.0" layoutY="59.0" prefHeight="40.0" prefWidth="250.0" promptText="Address" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="522.0" layoutY="59.0" prefHeight="40.0" prefWidth="250.0" promptText="Address">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtEducation" focusColor="#860a0a" labelFloat="true" layoutX="864.0" layoutY="141.0" prefHeight="40.0" prefWidth="316.0" promptText="Education" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtEducation" labelFloat="true" layoutX="864.0" layoutY="141.0" prefHeight="40.0" prefWidth="316.0" promptText="Education">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtBirthday" focusColor="#860a0a" labelFloat="true" layoutX="864.0" layoutY="59.0" prefHeight="40.0" prefWidth="294.0" promptText="Birth Day" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtBirthday" labelFloat="true" layoutX="864.0" layoutY="59.0" prefHeight="40.0" prefWidth="294.0" promptText="Birth Day">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtAge" focusColor="#860a0a" labelFloat="true" layoutX="15.0" layoutY="136.0" prefHeight="40.0" prefWidth="154.0" promptText="Age" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtAge" labelFloat="true" layoutX="15.0" layoutY="136.0" prefHeight="40.0" prefWidth="154.0" promptText="Age">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtGender" focusColor="#860a0a" labelFloat="true" layoutX="214.0" layoutY="141.0" prefHeight="40.0" prefWidth="168.0" promptText="Gender" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtGender" labelFloat="true" layoutX="214.0" layoutY="141.0" prefHeight="40.0" prefWidth="168.0" promptText="Gender">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtPhoneNumber" focusColor="#860a0a" labelFloat="true" layoutX="522.0" layoutY="141.0" prefHeight="40.0" prefWidth="250.0" promptText="Phone Number" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtPhoneNumber" labelFloat="true" layoutX="522.0" layoutY="141.0" prefHeight="40.0" prefWidth="250.0" promptText="Phone Number">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
@@ -111,18 +111,18 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <JFXComboBox fx:id="cmbProgramId" focusColor="#860a0a" layoutX="24.0" layoutY="49.0" prefHeight="40.0" prefWidth="168.0" promptText="Program Id" />
-            <JFXTextField fx:id="txtProgramName" focusColor="#860a0a" labelFloat="true" layoutX="236.0" layoutY="49.0" prefHeight="40.0" prefWidth="316.0" promptText="Program Name" unFocusColor="#860a0a">
+            <JFXComboBox fx:id="cmbProgramId" layoutX="24.0" layoutY="49.0" prefHeight="40.0" prefWidth="168.0" promptText="Program Id" />
+            <JFXTextField fx:id="txtProgramName" labelFloat="true" layoutX="236.0" layoutY="49.0" prefHeight="40.0" prefWidth="316.0" promptText="Program Name">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtDuration" focusColor="#860a0a" labelFloat="true" layoutX="603.0" layoutY="49.0" prefHeight="40.0" prefWidth="241.0" promptText="Duration" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtDuration" labelFloat="true" layoutX="603.0" layoutY="49.0" prefHeight="40.0" prefWidth="241.0" promptText="Duration">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtFee" focusColor="#860a0a" labelFloat="true" layoutX="886.0" layoutY="49.0" prefHeight="40.0" prefWidth="270.0" promptText="Fee (LKR)" unFocusColor="#860a0a">
+            <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="886.0" layoutY="49.0" prefHeight="40.0" prefWidth="270.0" promptText="Fee (LKR)">
                <font>
                   <Font name="Arial Rounded MT Bold" size="17.0" />
                </font>
@@ -142,17 +142,17 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtDate" alignment="CENTER" layoutX="592.0" layoutY="13.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="573.0" layoutY="7.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="788.0" layoutY="16.0" text="Time :" textFill="WHITE">
+            <Label layoutX="793.0" layoutY="21.0" text="Time :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtTime" alignment="CENTER" layoutX="869.0" layoutY="8.0" prefHeight="52.0" prefWidth="182.0" textFill="WHITE">
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="869.0" layoutY="12.0" prefHeight="52.0" prefWidth="178.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>

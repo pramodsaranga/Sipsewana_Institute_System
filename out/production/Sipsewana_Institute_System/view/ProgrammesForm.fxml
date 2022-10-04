@@ -121,7 +121,7 @@
          </font>
       </Label>
       <TextField fx:id="txtFee" layoutX="913.0" layoutY="219.0" onAction="#feeOnAction" prefHeight="38.0" prefWidth="286.0" promptText="Fee (LKR)" styleClass="textField" />
-      <JFXTextField fx:id="txtSearch" focusColor="#752003" labelFloat="true" layoutX="907.0" layoutY="97.0" prefHeight="52.0" prefWidth="266.0" promptText="Search">
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="907.0" layoutY="97.0" prefHeight="52.0" prefWidth="266.0" promptText="Search">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
