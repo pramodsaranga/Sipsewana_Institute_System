@@ -140,7 +140,6 @@ public class StudentFormController {
         String studentName = txtFullName.getText();
         String address = txtAddress.getText();
         String birthday =String.valueOf(dpBirthday.getValue());
-        //String birthday = txtBirthDay.getText();
         int age = Integer.parseInt(txtAge.getText());
         String gender = String.valueOf(cmbGender.getValue());
         String phoneNumber = txtPhoneNumber.getText();
