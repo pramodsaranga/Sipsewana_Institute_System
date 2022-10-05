@@ -74,14 +74,7 @@ public class StudentFormController {
     public void initialize() throws SQLException, ClassNotFoundException {
         storeValidation();
 
-        colStudentId.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colFullName.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colAddress.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        coBirthday.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colAge.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colGender.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colPhoneNumber.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colEducation.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
+
 
 
         colStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
@@ -186,6 +179,7 @@ public class StudentFormController {
 
 
     boolean existStudent(String studentId) {
+
         return studentBO.ifStudentExist(studentId);
     }
 

@@ -68,10 +68,6 @@ public class ProgramFormController {
         colDuration.setCellValueFactory(new PropertyValueFactory<>("duration"));
         colFee.setCellValueFactory(new PropertyValueFactory<>("fee"));
 
-        colProgramId.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colProgramName.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colDuration.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colFee.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
 
         loadDateAndTime();
 

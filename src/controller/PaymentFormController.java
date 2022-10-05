@@ -92,13 +92,6 @@ public class PaymentFormController {
         colPayment.setCellValueFactory(new PropertyValueFactory<>("total"));
 
 
-        colRegisterId.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colProgramName.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colProgramId.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colPayment.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colStudentId.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-        colStudentName.setStyle("-fx-border-color: #860a0a;-fx-table-cell-border-color:#860a0a;");
-
         try {
             loadProgramIds();
         } catch (SQLException throwables) {
