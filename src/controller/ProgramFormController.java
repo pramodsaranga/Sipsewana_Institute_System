@@ -184,6 +184,10 @@ public class ProgramFormController {
         window.setScene(new Scene(load));
     }
 
+    private void setProgramId() throws SQLException, ClassNotFoundException {
+        txtId.setText(programBO.getProgramIds());
+    }
+
     public void durationOnAction(ActionEvent actionEvent) {
 
         txtFee.requestFocus();

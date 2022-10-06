@@ -19,12 +19,12 @@ public class LoginFormController {
 
 
     public void openAdminForm(ActionEvent actionEvent) throws IOException {
-        if (txtUserName.getText().equalsIgnoreCase("Saranga") && txtPassword.getText().equals("1998")) {
+        if (txtUserName.getText().equalsIgnoreCase("Admin") && txtPassword.getText().equals("2021")) {
             URL resource = getClass().getResource("../view/AdminForm.fxml");
             Parent load = FXMLLoader.load(resource);
             loginContext.getChildren().clear();
             loginContext.getChildren().add(load);
-        } else if(txtUserName.getText().equalsIgnoreCase("Sathya") && txtPassword.getText().equals("1999")){
+        } else if(txtUserName.getText().equalsIgnoreCase("manager") && txtPassword.getText().equals("1998")){
             URL resource = getClass().getResource("../view/AdminForm.fxml");
             Parent load = FXMLLoader.load(resource);
             loginContext.getChildren().clear();
