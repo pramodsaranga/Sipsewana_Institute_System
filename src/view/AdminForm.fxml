@@ -9,22 +9,22 @@
 
 <AnchorPane fx:id="adminContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminFormController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="213.0" layoutY="24.0" pickOnBounds="true">
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="213.0" layoutY="30.0" pickOnBounds="true">
          <image>
             <Image url="@assets/email.png" />
          </image>
       </ImageView>
-      <Label layoutX="263.0" layoutY="22.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
+      <Label layoutX="263.0" layoutY="28.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="468.0" layoutY="22.0" pickOnBounds="true">
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="468.0" layoutY="28.0" pickOnBounds="true">
          <image>
             <Image url="@assets/z6.png" />
          </image>
       </ImageView>
-      <Label layoutX="509.0" layoutY="19.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
+      <Label layoutX="509.0" layoutY="25.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
          <font>
             <Font size="18.0" />
          </font>
@@ -56,7 +56,8 @@
                   <Font name="Arial Rounded MT Bold" size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="18.0" layoutY="37.0" onAction="#openStudentFormOnAction" prefHeight="394.0" prefWidth="325.0" text="Button" />
+            <JFXButton layoutX="18.0" layoutY="37.0" onAction="#openStudentFormOnAction" prefHeight="375.0" prefWidth="325.0" text="Button" />
+            <JFXButton layoutX="136.0" layoutY="407.0" onAction="#openStudentDetailsForm" text="View more" textFill="#314597" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="470.0" layoutY="190.0" prefHeight="475.0" prefWidth="371.0" style="-fx-background-color: #58B19F; -fx-background-radius: 50;">
@@ -71,7 +72,8 @@
                   <Font name="Arial Rounded MT Bold" size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="-7.0" layoutY="10.0" onAction="#openProgrammesFormOnAction" prefHeight="455.0" prefWidth="336.0" />
+            <JFXButton layoutX="-7.0" layoutY="10.0" onAction="#openProgrammesFormOnAction" prefHeight="406.0" prefWidth="336.0" />
+            <JFXButton layoutX="134.0" layoutY="405.0" onAction="#openProgrammeDetailsForm" text="View more" textFill="#314597" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="896.0" layoutY="190.0" prefHeight="475.0" prefWidth="361.0" style="-fx-background-color: #58B19F; -fx-background-radius: 50;">
@@ -86,8 +88,8 @@
                   <Font name="Arial Rounded MT Bold" size="27.0" />
                </font>
             </Label>
-            <JFXButton layoutX="24.0" layoutY="10.0" onAction="#openPaymentFormOnAction" prefHeight="455.0" prefWidth="325.0" />
-            <JFXButton layoutX="129.0" layoutY="410.0" text="View more" textFill="WHITE" />
+            <JFXButton layoutX="24.0" onAction="#openPaymentFormOnAction" prefHeight="394.0" prefWidth="325.0" />
+            <JFXButton layoutX="134.0" layoutY="403.0" onAction="#openPaymentDetailsForm" text="View more" textFill="#314597" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="20.0" layoutY="1.0" pickOnBounds="true">

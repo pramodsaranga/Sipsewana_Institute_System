@@ -48,4 +48,26 @@ public class AdminFormController {
         Stage window = (Stage) adminContext.getScene().getWindow();
         window.setScene(new Scene(load));
     }
+
+
+    public void openProgrammeDetailsForm(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/ProgrammeDetailsForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) adminContext.getScene().getWindow();
+        window.setScene(new Scene(load));
+    }
+
+    public void openPaymentDetailsForm(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/PaymentDetailsForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) adminContext.getScene().getWindow();
+        window.setScene(new Scene(load));
+    }
+
+    public void openStudentDetailsForm(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/StudentDetailsForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) adminContext.getScene().getWindow();
+        window.setScene(new Scene(load));
+    }
 }
