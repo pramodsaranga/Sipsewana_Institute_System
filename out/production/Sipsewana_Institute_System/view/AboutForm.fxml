@@ -1,14 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.AboutFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="aboutContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutFormController">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="217.0" layoutY="23.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/email.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="267.0" layoutY="21.0" prefHeight="35.0" prefWidth="180.0" text="info@sipsewana.com">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="472.0" layoutY="21.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/z6.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="513.0" layoutY="18.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="998.0" layoutY="14.0" onAction="#openHomeFormOnAction" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #16a085; -fx-background-radius: 50;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1161.0" layoutY="13.0" onAction="#openAboutFormOnAction" prefHeight="45.0" prefWidth="132.0" style="-fx-background-color: #27ae60; -fx-background-radius: 50;" text="About " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="24.0" layoutY="-6.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/ap28.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="18.0" layoutY="17.0" prefHeight="52.0" prefWidth="140.0" text="Sipsewana" textFill="#46cdcd">
+         <font>
+            <Font name="Blackadder ITC" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="795.0" fitWidth="1311.0" layoutY="81.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/3a.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="63.0" layoutY="130.0" prefHeight="269.0" prefWidth="424.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <children>
+            <ImageView fitHeight="185.0" fitWidth="295.0" layoutX="41.0" layoutY="29.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/ap28.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="122.0" prefHeight="56.0" prefWidth="314.0" text="Sipsewana" textFill="#46cdcd">
+               <font>
+                  <Font name="Blackadder ITC" size="69.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="129.0" layoutY="479.0" opacity="0.95" prefHeight="320.0" prefWidth="1009.0" style="-fx-background-color: #16a085; -fx-background-radius: 50;">
+         <children>
+            <Label layoutX="287.0" layoutY="14.0" prefHeight="60.0" prefWidth="536.0" text="The Istitute Of Sipsewana" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="51.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="109.0" prefHeight="60.0" prefWidth="140.0" text="Location    :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="162.0" prefHeight="60.0" prefWidth="140.0" text="Email          :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="115.0" layoutY="229.0" prefHeight="60.0" prefWidth="147.0" text="Contact     :" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="287.0" layoutY="109.0" prefHeight="60.0" prefWidth="438.0" text="NO:144R ,Mawathgama Road, Galle" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="287.0" layoutY="162.0" prefHeight="60.0" prefWidth="438.0" text="info@sipsewana.com" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="287.0" layoutY="229.0" prefHeight="60.0" prefWidth="618.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <BorderPane layoutX="21.0" layoutY="116.0" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+               <center>
+                  <ImageView fitHeight="45.0" fitWidth="44.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@assets/google-maps.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane layoutX="21.0" layoutY="176.0" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+               <center>
+                  <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@assets/email.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <BorderPane layoutX="21.0" layoutY="236.0" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+               <center>
+                  <ImageView fitHeight="34.0" fitWidth="27.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@assets/z6.png" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="605.0" layoutY="130.0" prefHeight="92.0" prefWidth="604.0" text="Learned fine craft is what " textFill="WHITE">
+         <font>
+            <Font name="Blackadder ITC" size="58.0" />
+         </font>
+      </Label>
+      <Label layoutX="923.0" layoutY="196.0" prefHeight="97.0" prefWidth="323.0" text=" keeps the future" textFill="WHITE">
+         <font>
+            <Font name="Blackadder ITC" size="58.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

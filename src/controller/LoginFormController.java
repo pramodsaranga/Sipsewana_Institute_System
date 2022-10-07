@@ -40,6 +40,10 @@ public class LoginFormController {
 
     }
 
-    public void openAboutFormOnAction(ActionEvent actionEvent) {
+    public void openAboutFormOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/AboutForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Stage window = (Stage) loginContext.getScene().getWindow();
+        window.setScene(new Scene(load));
     }
 }
