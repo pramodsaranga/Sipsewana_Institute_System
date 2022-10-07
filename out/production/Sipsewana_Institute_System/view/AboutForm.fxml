@@ -145,5 +145,14 @@
             <Font name="Blackadder ITC" size="58.0" />
          </font>
       </Label>
+      <BorderPane layoutX="623.0" layoutY="219.0" prefHeight="198.0" prefWidth="284.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <center>
+            <ImageView fitHeight="164.0" fitWidth="238.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@assets/pla32.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>

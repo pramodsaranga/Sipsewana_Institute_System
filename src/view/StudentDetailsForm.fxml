@@ -38,7 +38,7 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtDate" alignment="CENTER" layoutX="584.0" layoutY="8.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="580.0" layoutY="8.0" prefHeight="52.0" prefWidth="176.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtTime" alignment="CENTER" layoutX="873.0" layoutY="8.0" prefHeight="52.0" prefWidth="170.0" textFill="WHITE">
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="865.0" layoutY="8.0" prefHeight="52.0" prefWidth="163.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>

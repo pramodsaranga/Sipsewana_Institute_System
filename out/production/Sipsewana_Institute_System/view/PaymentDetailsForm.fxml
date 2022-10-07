@@ -25,7 +25,7 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtDate" alignment="CENTER" layoutX="572.0" layoutY="11.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="572.0" layoutY="11.0" prefHeight="52.0" prefWidth="162.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
@@ -35,12 +35,11 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtTime" alignment="CENTER" layoutX="868.0" layoutY="16.0" prefHeight="52.0" prefWidth="178.0" textFill="WHITE">
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="859.0" layoutY="11.0" prefHeight="52.0" prefWidth="170.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="929.0" layoutY="-62.0" prefHeight="94.0" prefWidth="87.0" />
             <AnchorPane layoutX="1063.0" layoutY="8.0" prefHeight="61.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 50;">
                <children>
                   <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="1.0" onAction="#openAdminFormOnAction" prefHeight="61.0" prefWidth="104.0" style="-fx-background-color: #cc439c; -fx-background-radius: 50;" text="Back" textFill="WHITE">
