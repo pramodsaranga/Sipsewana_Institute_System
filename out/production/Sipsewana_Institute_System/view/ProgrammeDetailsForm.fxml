@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,57 +10,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="studentDetailsContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentDetailsFormController">
+
+<AnchorPane fx:id="programDetailsContext" prefHeight="876.0" prefWidth="1311.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgrammeDetailsFormController">
    <children>
-      <TableView fx:id="tblStudent" layoutX="17.0" layoutY="110.0" prefHeight="741.0" prefWidth="1277.0">
+      <TableView fx:id="tblProgram" layoutX="17.0" layoutY="109.0" prefHeight="717.0" prefWidth="1277.0">
          <columns>
-            <TableColumn fx:id="colStudentId" prefWidth="94.0" text="Student Id" />
-            <TableColumn fx:id="colFullName" prefWidth="243.0" text="Full Name" />
-            <TableColumn fx:id="colAddress" prefWidth="162.0" text="Address" />
-            <TableColumn fx:id="colBirthday" prefWidth="154.0" text="BirthDay" />
-            <TableColumn fx:id="colAge" prefWidth="79.0" text="Age" />
-            <TableColumn fx:id="colGender" prefWidth="105.0" text="Gender" />
-            <TableColumn fx:id="colPhoneNumber" prefWidth="185.0" text="Phone Number" />
-            <TableColumn fx:id="colEducation" prefWidth="254.0" text="Education" />
+            <TableColumn fx:id="colProgramId" prefWidth="189.99996948242188" text="Program Id" />
+            <TableColumn fx:id="colProgramName" prefWidth="445.0" text="Program Name" />
+            <TableColumn fx:id="colDuration" prefWidth="336.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="305.0" text="Fee (LKR)" />
          </columns>
       </TableView>
       <AnchorPane prefHeight="76.0" prefWidth="1311.0" style="-fx-background-color: #58B19F;">
          <children>
-            <Label layoutX="14.0" layoutY="8.0" prefHeight="61.0" prefWidth="286.0" text="Student Details" textFill="WHITE">
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="61.0" prefWidth="333.0" text="Programmes Details" textFill="WHITE">
                <font>
                   <Font name="Baskerville Old Face" size="39.0" />
                </font>
             </Label>
-            <Separator layoutX="310.0" layoutY="49.0" prefHeight="0.0" prefWidth="170.0" />
+            <Separator layoutX="357.0" layoutY="49.0" prefHeight="3.0" prefWidth="123.0" />
             <Label layoutX="509.0" layoutY="17.0" text="Date :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtDate" alignment="CENTER" layoutX="584.0" layoutY="8.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="592.0" layoutY="13.0" prefHeight="52.0" prefWidth="189.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label layoutX="798.0" layoutY="17.0" text="Time :" textFill="WHITE">
+            <Label layoutX="788.0" layoutY="16.0" text="Time :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
-            <Label fx:id="txtTime" alignment="CENTER" layoutX="873.0" layoutY="8.0" prefHeight="52.0" prefWidth="170.0" textFill="WHITE">
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="869.0" layoutY="8.0" prefHeight="52.0" prefWidth="182.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Label>
+            <AnchorPane layoutX="929.0" layoutY="-62.0" prefHeight="94.0" prefWidth="87.0" />
             <AnchorPane layoutX="1063.0" layoutY="8.0" prefHeight="61.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 50;">
                <children>
                   <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="1.0" onAction="#openAdminFormOnAction" prefHeight="61.0" prefWidth="104.0" style="-fx-background-color: #cc439c; -fx-background-radius: 50;" text="Back" textFill="WHITE">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="17.0" />
                      </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                   </JFXButton>
                   <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="33.0" layoutY="15.0" pickOnBounds="true">
                      <image>
