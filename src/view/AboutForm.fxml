@@ -20,12 +20,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="472.0" layoutY="21.0" pickOnBounds="true">
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="472.0" layoutY="24.0" pickOnBounds="true">
          <image>
             <Image url="@assets/z6.png" />
          </image>
       </ImageView>
-      <Label layoutX="513.0" layoutY="18.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
+      <Label layoutX="513.0" layoutY="21.0" prefHeight="35.0" prefWidth="445.0" text="+94 912 274 186 / +94 912 272 387 / +94 775 268 999">
          <font>
             <Font size="18.0" />
          </font>
@@ -135,17 +135,17 @@
             </BorderPane>
          </children>
       </AnchorPane>
-      <Label layoutX="605.0" layoutY="130.0" prefHeight="92.0" prefWidth="604.0" text="Learned fine craft is what " textFill="WHITE">
+      <Label layoutX="605.0" layoutY="130.0" prefHeight="97.0" prefWidth="503.0" text="Learned fine craft is what " textFill="WHITE">
          <font>
             <Font name="Blackadder ITC" size="58.0" />
          </font>
       </Label>
-      <Label layoutX="923.0" layoutY="196.0" prefHeight="97.0" prefWidth="323.0" text=" keeps the future" textFill="WHITE">
+      <Label layoutX="871.0" layoutY="227.0" prefHeight="97.0" prefWidth="373.0" text="       keeps the future" textFill="WHITE">
          <font>
             <Font name="Blackadder ITC" size="58.0" />
          </font>
       </Label>
-      <BorderPane layoutX="623.0" layoutY="219.0" prefHeight="198.0" prefWidth="284.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+      <BorderPane layoutX="634.0" layoutY="225.0" prefHeight="198.0" prefWidth="284.0" style="-fx-background-color: #e06161; -fx-background-radius: 50;">
          <center>
             <ImageView fitHeight="164.0" fitWidth="238.0" pickOnBounds="true" BorderPane.alignment="CENTER">
                <image>
